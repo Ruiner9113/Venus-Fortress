@@ -29,16 +29,16 @@ if [ ! -f "$SCRIPT_DIR/srcds_run_64" ] && [ ! -f "$SCRIPT_DIR/srcds_linux64" ]; 
     exit 1
 fi
 
-# Check if customfortress folder exists
-if [ ! -d "$SCRIPT_DIR/customfortress" ]; then
-    echo "ERROR: customfortress folder not found!"
-    echo "Make sure the Custom Fortress 2 dedicated server is properly installed."
+# Check if venusfortress folder exists
+if [ ! -d "$SCRIPT_DIR/venusfortress" ]; then
+    echo "ERROR: venusfortress folder not found!"
+    echo "Make sure the Venus Fortress dedicated server is properly installed."
     exit 1
 fi
 
 # Use server-specific gameinfo.txt (handles paths for dedicated server)
-if [ -f "$SCRIPT_DIR/customfortress/gameinfo_server.txt" ]; then
-    cp "$SCRIPT_DIR/customfortress/gameinfo_server.txt" "$SCRIPT_DIR/customfortress/gameinfo.txt"
+if [ -f "$SCRIPT_DIR/venusfortress/gameinfo_server.txt" ]; then
+    cp "$SCRIPT_DIR/venusfortress/gameinfo_server.txt" "$SCRIPT_DIR/venusfortress/gameinfo.txt"
     echo "Using server gameinfo configuration."
 fi
 
@@ -65,8 +65,8 @@ if [ -d "$BINDIR" ]; then
     cd "$SCRIPT_DIR"
 fi
 
-# Mod binary symlinks in customfortress/bin/linux64/
-MODBIN="$SCRIPT_DIR/customfortress/bin/linux64"
+# Mod binary symlinks in venusfortress/bin/linux64/
+MODBIN="$SCRIPT_DIR/venusfortress/bin/linux64"
 if [ -d "$MODBIN" ]; then
     cd "$MODBIN"
     [ -f "server.so" ] && ln -sf server.so server_srv.so
@@ -84,7 +84,7 @@ if [ ! -d "$HOME/.steam/sdk64" ] && [ -d "$HOME/.steam/steam/steamcmd/linux64" ]
 fi
 
 # Set library path for Source engine shared libraries
-export LD_LIBRARY_PATH="$SCRIPT_DIR/bin/linux64:$SCRIPT_DIR/customfortress/bin/linux64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$SCRIPT_DIR/bin/linux64:$SCRIPT_DIR/venusfortress/bin/linux64:$LD_LIBRARY_PATH"
 export SteamEnv=1
 
 # Launch the server
@@ -94,9 +94,9 @@ cd "$SCRIPT_DIR"
 if [ -f "./srcds_run_64" ]; then
     echo "Starting Custom Fortress 2 Dedicated Server (using srcds_run_64)..."
     # Note: -insecure disables VAC. Remove it for production servers that need VAC protection.
-    ./srcds_run_64 -game customfortress -console +sv_lan 0 "$@"
+    ./srcds_run_64 -game venusfortress -console +sv_lan 0 "$@"
 else
     echo "Starting Custom Fortress 2 Dedicated Server (using srcds_linux64)..."
     # Note: -insecure disables VAC. Remove it for production servers that need VAC protection.
-    ./srcds_linux64 -game customfortress -console +sv_lan 0 "$@"
+    ./srcds_linux64 -game venusfortress -console +sv_lan 0 "$@"
 fi
