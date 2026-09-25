@@ -508,7 +508,7 @@ void CObjectTeleporter::Precache()
 	PrecacheGibsForModel( iModelIndex );
 
 	// Bread models
-	int nRange = TF_LAST_NORMAL_CLASS - TF_FIRST_NORMAL_CLASS + 1;
+	int nRange = TF_LAST_NORMAL_CLASS - TF_FIRST_NORMAL_CLASS;
 	for( int i = 0; i < nRange; ++i )
 	{
 		if ( g_pszBreadModels[i] && *g_pszBreadModels[i] )

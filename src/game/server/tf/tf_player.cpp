@@ -2927,6 +2927,7 @@ void CTFPlayer::RuneRegenThink( void )
 	case TF_CLASS_SPY:
 		flAmount = 16;
 		break;
+	case TF_CLASS_CIVILIAN:
 	case TF_CLASS_SNIPER:
 	case TF_CLASS_ENGINEER:
 		flAmount = 14;

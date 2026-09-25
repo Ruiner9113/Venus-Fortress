@@ -197,7 +197,7 @@ enum
 #define TF_CLASS_COUNT			( TF_CLASS_COUNT_ALL )
 
 #define TF_FIRST_NORMAL_CLASS	( TF_CLASS_UNDEFINED + 1 )
-#define TF_LAST_NORMAL_CLASS	( TF_CLASS_CIVILIAN )
+#define TF_LAST_NORMAL_CLASS	( TF_CLASS_CUSTOM )
 
 #define	TF_CLASS_MENU_BUTTONS	( TF_CLASS_RANDOM + 1 )
 #define TF_CLASS_RANDOM_OLD		12
@@ -217,8 +217,8 @@ enum ETFClass
 	TF_CLASS_ENGINEER,		
 
 	// Add any new classes after Engineer
-	TF_CLASS_CIVILIAN,		// TF_LAST_NORMAL_CLASS
-	TF_CLASS_CUSTOM,		// Template, NOT MEANT TO APPEAR IN THE CLASS MENU.
+	TF_CLASS_CIVILIAN,
+	TF_CLASS_CUSTOM,		// TF_LAST_NORMAL_CLASS
 	TF_CLASS_COUNT_ALL,
 
 	TF_CLASS_RANDOM
@@ -649,7 +649,7 @@ extern const char *g_pszInvasionMaps[];
 bool IsPlayingInvasionMap( void );
 
 #define SCOREBOARD_DOMINATION_ICONS		17
-#define SCOREBOARD_CLASS_ICONS			19
+#define SCOREBOARD_CLASS_ICONS			21
 #define SCOREBOARD_PING_ICONS			6
 
 extern const char *g_pszClassIcons[];

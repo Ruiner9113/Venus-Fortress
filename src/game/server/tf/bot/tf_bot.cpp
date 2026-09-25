@@ -868,6 +868,7 @@ bool CTFBot::GetWeightDesiredClassToSpawn( CUtlVector< ETFClass > &vecClassToSpa
 		{ TF_CLASS_MEDIC,			4, 4, 1, { 1, 1, 2, 2 } },
 		{ TF_CLASS_SNIPER,			5, 0, 0, { 0, 1, 1, 1 } },
 		{ TF_CLASS_SPY,				5, 0, 0, { 0, 1, 2, 2 } },
+		{ TF_CLASS_CIVILIAN,		0, 0, 0,{ 1, 1, 1, 1 } },
 
 		{ TF_CLASS_UNDEFINED,		0, -1 },
 	};
@@ -883,6 +884,8 @@ bool CTFBot::GetWeightDesiredClassToSpawn( CUtlVector< ETFClass > &vecClassToSpa
 		{ TF_CLASS_SNIPER,			5, 0, 0, { 0, 1, 1, 1 } },
 		{ TF_CLASS_SPY,				5, 0, 0, { 0, 1, 2, 2 } },
 		{ TF_CLASS_ENGINEER,		5, 0, 0, { 1, 1, 1, 1 } },
+		{ TF_CLASS_CIVILIAN,		0, 0, 0,{ 1, 1, 1, 1 } },
+
 
 		{ TF_CLASS_UNDEFINED,		0, -1 },
 	};
@@ -3125,6 +3128,7 @@ float CTFBot::GetThreatDanger( CBaseCombatCharacter *who ) const
 		case TF_CLASS_MEDIC:
 			return 0.2f;		// 1/5
 
+		case TF_CLASS_CIVILIAN:
 		case TF_CLASS_ENGINEER:
 		case TF_CLASS_SNIPER:
 			return 0.4f;		// 2/5

@@ -83,6 +83,7 @@ StatMap_t* g_SteamStats_Class[] = {
 	g_SteamStats_Pyro,		// Pyro
 	g_SteamStats_Spy,		// Spy
 	g_SteamStats_Engineer,	// Engineer
+	NULL,					// Civilian
 };
 
 // subset of map stats which we store in Steam

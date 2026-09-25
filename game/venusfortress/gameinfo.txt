@@ -1,6 +1,6 @@
 "GameInfo"
 {
-	game					"Custom Fortress 2"
+	game					"Venus Fortress"
 	type 					multiplayer_only
 	nomodels				1
 	nohimodel 				1
@@ -23,7 +23,7 @@
 
 	FileSystem
 	{
-		SteamAppId				3768450
+		SteamAppId				243750
 		
 		SearchPaths
 		{

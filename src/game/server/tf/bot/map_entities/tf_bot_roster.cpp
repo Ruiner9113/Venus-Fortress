@@ -22,6 +22,7 @@ BEGIN_DATADESC( CTFBotRoster )
 	DEFINE_KEYFIELD( m_bAllowedClasses[TF_CLASS_PYRO],			FIELD_BOOLEAN,	"allowPyro" ),
 	DEFINE_KEYFIELD( m_bAllowedClasses[TF_CLASS_SPY],			FIELD_BOOLEAN,	"allowSpy" ),
 	DEFINE_KEYFIELD( m_bAllowedClasses[TF_CLASS_ENGINEER],		FIELD_BOOLEAN,	"allowEngineer" ),
+	DEFINE_KEYFIELD( m_bAllowedClasses[TF_CLASS_CIVILIAN],		FIELD_BOOLEAN,  "allowCivilian" ),
 
 	DEFINE_INPUTFUNC( FIELD_STRING, "SetTeam", InputSetTeam ),
 	DEFINE_INPUTFUNC( FIELD_BOOLEAN, "SetAllowScout", InputSetAllowScout ),
@@ -33,6 +34,7 @@ BEGIN_DATADESC( CTFBotRoster )
 	DEFINE_INPUTFUNC( FIELD_BOOLEAN, "SetAllowPyro", InputSetAllowPyro ),
 	DEFINE_INPUTFUNC( FIELD_BOOLEAN, "SetAllowSpy", InputSetAllowSpy ),
 	DEFINE_INPUTFUNC( FIELD_BOOLEAN, "SetAllowEngineer", InputSetAllowEngineer ),
+	DEFINE_INPUTFUNC( FIELD_BOOLEAN, "SetAllowCivilian", InputSetAllowCivilian ),
 
 END_DATADESC()
 
@@ -90,6 +92,11 @@ void CTFBotRoster::InputSetAllowSpy( inputdata_t &inputdata )
 void CTFBotRoster::InputSetAllowEngineer( inputdata_t &inputdata )
 {
 	m_bAllowedClasses[TF_CLASS_ENGINEER] = inputdata.value.Bool();
+}
+
+void CTFBotRoster::InputSetAllowCivilian(inputdata_t& inputdata)
+{
+	m_bAllowedClasses[TF_CLASS_CIVILIAN] = inputdata.value.Bool();
 }
 
 //------------------------------------------------------------------------------

@@ -730,6 +730,8 @@ enum kill_eater_event_t
 	kKillEaterEvent_ContractPointsContributedToFriends,
 
 	// NEW ENTRIES MUST BE ADDED AT THE BOTTOM
+	kKillEaterEvent_CivilianKill,
+	kKillEaterEvent_RobotCivilianKill,
 };
 #else
 	// projects that actually want to implement kill-eater functionality will want to put their list somewhere around here,

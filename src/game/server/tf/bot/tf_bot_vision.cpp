@@ -252,6 +252,12 @@ bool CTFBotVision::IsIgnored( CBaseEntity *subject ) const
 				return true;
 			}
 			break;
+		case TF_CLASS_CIVILIAN:
+			if ( me->IsBehaviorFlagSet( TFBOT_IGNORE_ENEMY_CIVILIANS ) )
+			{
+				return true;
+			}
+			break;
 		}
 
 		if (enemy->m_Shared.InCond(TF_COND_REPROGRAMMED))

@@ -247,6 +247,7 @@ const char *g_pszBreadModels[] =
 	"models/weapons/c_models/c_bread/c_bread_pretzel.mdl",		// Medic
 	"models/weapons/c_models/c_bread/c_bread_ration.mdl",		// Soldier
 	"models/weapons/c_models/c_bread/c_bread_russianblack.mdl",	// Heavy?
+	"models/weapons/c_models/c_bread/c_bread_baguette.mdl",		// Civilian
 };
 
 int GetClassIndexFromString( const char *pClassName, int nLastClassIndex/*=TF_LAST_NORMAL_CLASS*/ )
@@ -1728,7 +1729,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"tf_weapon_shotgun_hwg",	// TF_CLASS_HEAVYWEAPONS,
 			"tf_weapon_shotgun_pyro",	// TF_CLASS_PYRO,
 			"",							// TF_CLASS_SPY,
-			"tf_weapon_shotgun_primary",// TF_CLASS_ENGINEER,		
+			"tf_weapon_shotgun_primary",// TF_CLASS_ENGINEER,
+			"",							// TF_CLASS_CIVILIAN,
 		}
 	},
 
@@ -1744,7 +1746,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"",							// TF_CLASS_HEAVYWEAPONS,
 			"",							// TF_CLASS_PYRO,
 			"",							// TF_CLASS_SPY,
-			"tf_weapon_pistol",			// TF_CLASS_ENGINEER,		
+			"tf_weapon_pistol",			// TF_CLASS_ENGINEER,
+			"",							// TF_CLASS_CIVILIAN,
 		}
 	},
 
@@ -1760,7 +1763,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"",							// TF_CLASS_HEAVYWEAPONS,
 			"",							// TF_CLASS_PYRO,
 			"",							// TF_CLASS_SPY,
-			"",							// TF_CLASS_ENGINEER,		
+			"",							// TF_CLASS_ENGINEER,
+			"",							// TF_CLASS_CIVILIAN,
 		}
 	},
 	{
@@ -1775,7 +1779,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"",							// TF_CLASS_HEAVYWEAPONS,
 			"",							// TF_CLASS_PYRO,
 			"",							// TF_CLASS_SPY,
-			"",							// TF_CLASS_ENGINEER,		
+			"",							// TF_CLASS_ENGINEER,
+			"",							// TF_CLASS_CIVILIAN
 		}
 	},
 	{
@@ -1790,7 +1795,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"tf_weapon_fireaxe",		// TF_CLASS_HEAVYWEAPONS,		HWG uses a fireaxe because he doesn't have a default melee weapon of his own; also I am a terrible person
 			"tf_weapon_fireaxe",		// TF_CLASS_PYRO,
 			"tf_weapon_knife",			// TF_CLASS_SPY,
-			"tf_weapon_wrench",			// TF_CLASS_ENGINEER,		
+			"tf_weapon_wrench",			// TF_CLASS_ENGINEER,
+			"tf_weapon_crowbar",		// TF_CLASS_CIVILIAN
 		}
 	},
 	{
@@ -1805,7 +1811,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"tf_weapon_throwable_secondary",			// TF_CLASS_HEAVYWEAPONS
 			"tf_weapon_throwable_secondary",			// TF_CLASS_PYRO,
 			"tf_weapon_throwable_secondary",			// TF_CLASS_SPY,
-			"tf_weapon_throwable_secondary",			// TF_CLASS_ENGINEER,		
+			"tf_weapon_throwable_secondary",			// TF_CLASS_ENGINEER,
+			"tf_weapon_throwable_secondary",			// TF_CLASS_CIVILIAN,
 		}
 	},
 	{
@@ -1820,7 +1827,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"",			// TF_CLASS_HEAVYWEAPONS
 			"",			// TF_CLASS_PYRO,
 			""			// TF_CLASS_SPY,
-			"",			// TF_CLASS_ENGINEER,		
+			"",			// TF_CLASS_ENGINEER,
+			""			// TF_CLASS_CIVILIAN,
 		}
 	},
 	{
@@ -1835,7 +1843,8 @@ wpntranslation_class_weapons_t pszWpnEntTranslationList[] =
 			"",			// TF_CLASS_HEAVYWEAPONS
 			"",			// TF_CLASS_PYRO,
 			"tf_weapon_revolver",				// TF_CLASS_SPY,
-			"tf_weapon_revolver_secondary",		// TF_CLASS_ENGINEER,		
+			"tf_weapon_revolver_secondary",		// TF_CLASS_ENGINEER,
+			""			// TF_CLASS_CIVILIAN,
 		}
 	},
 };
@@ -1954,6 +1963,7 @@ const char *g_pszClassIcons[SCOREBOARD_CLASS_ICONS] =
 	"../hud/leaderboard_class_pyro",
 	"../hud/leaderboard_class_spy",
 	"../hud/leaderboard_class_engineer",
+	"../hud/leaderboard_class_civilian",
 	"../hud/leaderboard_class_scout_d",
 	"../hud/leaderboard_class_sniper_d",
 	"../hud/leaderboard_class_soldier_d",
@@ -1963,6 +1973,7 @@ const char *g_pszClassIcons[SCOREBOARD_CLASS_ICONS] =
 	"../hud/leaderboard_class_pyro_d",
 	"../hud/leaderboard_class_spy_d",
 	"../hud/leaderboard_class_engineer_d",
+	"../hud/leaderboard_class_civilian_d",
 };
 
 const char *g_pszClassIconsAlt[SCOREBOARD_CLASS_ICONS] =
@@ -1977,6 +1988,7 @@ const char *g_pszClassIconsAlt[SCOREBOARD_CLASS_ICONS] =
 	"class_icons/class_icon_orange_pyro",
 	"class_icons/class_icon_orange_spy",
 	"class_icons/class_icon_orange_engineer",
+	"class_icons/class_icon_orange_civilian",
 	"class_icons/class_icon_orange_scout_d",
 	"class_icons/class_icon_orange_sniper_d",
 	"class_icons/class_icon_orange_soldier_d",
@@ -1986,6 +1998,7 @@ const char *g_pszClassIconsAlt[SCOREBOARD_CLASS_ICONS] =
 	"class_icons/class_icon_orange_pyro_d",
 	"class_icons/class_icon_orange_spy_d",
 	"class_icons/class_icon_orange_engineer_d",
+	"class_icons/class_icon_orange_civilian_d",
 };
 
 const char *g_pszItemClassImagesRed[] =
@@ -2000,6 +2013,7 @@ const char *g_pszItemClassImagesRed[] =
 	"class_portraits/pyro",			// TF_CLASS_PYRO,
 	"class_portraits/spy",			// TF_CLASS_SPY,
 	"class_portraits/engineer",		// TF_CLASS_ENGINEER,
+	"class_portraits/civilian",		// TF_CLASS_CIVILIAN,
 	"class_portraits/scout_grey",		// TF_CLASS_SCOUT,			
 	"class_portraits/sniper_grey",		// TF_CLASS_SNIPER,
 	"class_portraits/soldier_grey",		// TF_CLASS_SOLDIER,
@@ -2009,6 +2023,7 @@ const char *g_pszItemClassImagesRed[] =
 	"class_portraits/pyro_grey",		// TF_CLASS_PYRO,
 	"class_portraits/spy_grey",			// TF_CLASS_SPY,
 	"class_portraits/engineer_grey",	// TF_CLASS_ENGINEER,
+	"class_portraits/civilian_grey",		// TF_CLASS_CIVILIAN,
 };
 
 const char *g_pszItemClassImagesBlue[] =
@@ -2023,6 +2038,7 @@ const char *g_pszItemClassImagesBlue[] =
 	"class_portraits/pyro_blue",		// TF_CLASS_PYRO,
 	"class_portraits/spy_blue",			// TF_CLASS_SPY,
 	"class_portraits/engineer_blue",	// TF_CLASS_ENGINEER,
+	"class_portraits/civilian_blue",		// TF_CLASS_CIVILIAN,
 	"class_portraits/scout_blue_grey",		// TF_CLASS_SCOUT,			
 	"class_portraits/sniper_blue_grey",		// TF_CLASS_SNIPER,
 	"class_portraits/soldier_blue_grey",	// TF_CLASS_SOLDIER,
@@ -2032,6 +2048,7 @@ const char *g_pszItemClassImagesBlue[] =
 	"class_portraits/pyro_blue_grey",		// TF_CLASS_PYRO,
 	"class_portraits/spy_blue_grey",		// TF_CLASS_SPY,
 	"class_portraits/engineer_blue_grey",	// TF_CLASS_ENGINEER,
+	"class_portraits/civilian_blue_grey",	// TF_CLASS_CIVILIAN,
 };
 
 const char *g_pszCompetitiveMedalImages[] =

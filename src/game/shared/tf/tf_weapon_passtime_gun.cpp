@@ -1025,6 +1025,7 @@ static ConVar *s_pThrowArcConvars[TF_LAST_NORMAL_CLASS] = {
 	&tf_passtime_throwarc_pyro,
 	&tf_passtime_throwarc_spy,
 	&tf_passtime_throwarc_engineer,
+	&tf_passtime_throwarc_civilian,
 };
 
 //-----------------------------------------------------------------------------
