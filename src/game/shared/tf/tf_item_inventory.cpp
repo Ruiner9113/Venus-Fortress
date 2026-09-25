@@ -2282,14 +2282,14 @@ void ReloadClientItemSchema()
 	}
 	
 	// Try to load custom items if the file exists
-	if ( g_pFullFileSystem->FileExists( "scripts/items/items_custom.txt", "GAME" ) )
+	if ( g_pFullFileSystem->FileExists( "scripts/items/items_manifest.txt", "GAME" ) )
 	{
-		DevMsg("Loading custom items from items_custom.txt...\n");
+		DevMsg("Loading custom items from items_manifest.txt...\n");
 		vecErrors.Purge();
 		
 		// Create a KeyValues object to load the custom items
 		KeyValues *pKVCustom = new KeyValues( "ItemsCustom" );
-		if ( pKVCustom->LoadFromFile( g_pFullFileSystem, "scripts/items/items_custom.txt", "GAME" ) )
+		if ( pKVCustom->LoadFromFile( g_pFullFileSystem, "scripts/items/items_manifest.txt", "GAME" ) )
 		{
 			// Try to merge the custom items into the schema
 			KeyValues *pKVItems = pKVCustom->FindKey( "items" );
@@ -2337,7 +2337,7 @@ void ReloadClientItemSchema()
 	DevMsg("Item schema reloaded successfully and attributes refreshed.\n");
 }
 
-CON_COMMAND_F( cl_reload_item_schema, "Reload the item schema from items_game.txt and items_custom.txt on the client", FCVAR_CHEAT )
+CON_COMMAND_F( cl_reload_item_schema, "Reload the item schema from items_game.txt and items_manifest.txt on the client", FCVAR_CHEAT )
 {
 	ReloadClientItemSchema();
 }
@@ -2360,7 +2360,7 @@ CON_COMMAND_F( sv_reload_item_schema, "Reload the item schema from items_game.tx
 		return;
 	}
 	
-	DevMsg("Note: Custom items (items_custom.txt) are handled on the client side.\n");
+	DevMsg("Note: Custom items (items_manifest.txt) are handled on the client side.\n");
 	
 	// Clear and regenerate base items
 	TFInventoryManager()->GenerateBaseItems();

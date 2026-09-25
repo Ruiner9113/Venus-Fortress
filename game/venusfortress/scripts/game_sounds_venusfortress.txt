@@ -1,0 +1,18 @@
+// ------------------------------------------------------------------------------------ //
+// SILENCED PISTOL
+// ------------------------------------------------------------------------------------ //
+"Weapon_Pistol.SingleSilenced"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/pistol_shoot_silenced.wav"
+}
+
+"Weapon_Pistol.SingleCritSilenced"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/pistol_shoot_crit_silenced.wav"
+}

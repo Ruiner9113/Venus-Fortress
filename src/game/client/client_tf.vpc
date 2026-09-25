@@ -707,6 +707,8 @@ $Project "Client (TF)"
 				$File	"$SRCDIR\game\shared\tf\tf_weapon_rocketpack.h"
 				$File	"$SRCDIR\game\shared\tf\tf_weapon_scripted.cpp"
 				$File	"$SRCDIR\game\shared\tf\tf_weapon_scripted.h"
+				$File	"$SRCDIR\game\shared\tf\tf_weapon_pistol_spy.cpp"
+				$File	"$SRCDIR\game\shared\tf\tf_weapon_pistol_spy.h"
 			}
 
 			$Folder	"Economy"
