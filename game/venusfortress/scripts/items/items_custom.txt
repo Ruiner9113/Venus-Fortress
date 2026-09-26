@@ -30,6 +30,34 @@
 			"mouse_pressed_sound"		"ui/item_light_gun_pickup.wav"
 			"drop_sound"				"ui/item_light_gun_drop.wav"
 		}
+		"weapon_tranq"
+		{
+			"tags"
+			{
+				"can_deal_damage"					"1"
+				"can_deal_long_distance_damage"		"1"
+			}
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_tranq"
+			"item_type_name"			"TF_WEAPON_TRANQ"
+			"item_name"					"TF_WEAPON_TRANQ"
+			"item_description"			"sampletext"
+			"item_slot"					"secondary"
+			"anim_slot"					"ac"
+			"item_iconname"				"pistol"
+			"item_quality"				"unique"
+			"image_inventory"			"backpack/weapons/c_models/c_pistol"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"inspect_panel_dist" 		"31"
+			"model_player"				"models/weapons/w_models/w_tranq.mdl"
+			"used_by_classes"
+			{
+				"spy"			"1"
+			}
+			"mouse_pressed_sound"		"ui/item_light_gun_pickup.wav"
+			"drop_sound"				"ui/item_light_gun_drop.wav"
+		}
 	}
 	"attributes"
 	{
@@ -41,6 +69,23 @@
 			"name"				"Silenced Pistol"
 			"prefab"			"weapon_pistol_spy"
 			"moditem"			"1"
+		}
+		"21001"
+		{
+			"name"				"Tranquilizer"
+			"prefab"			"weapon_tranq"
+			"moditem"			"1"
+		}
+		"21002"
+		{
+			"name"				"Umbrella"
+			"prefab"			"weapon_bat"
+			"moditem"			"1"
+			"attach_to_hands"	"0"
+			"used_by_classes"
+			{
+				"civilian"	"1"
+			}
 		}
 	}
 }

@@ -2,9 +2,9 @@ PlayerClass
 {
 	// Attributes.
 	"name"						"civilian"
-	"model"						"models/player/civilian.mdl"
-	"model_hwm"					"models/player/hwm/civilian.mdl"
-	"model_hands"				"models/weapons/c_models/c_civilian_arms.mdl"
+	"model"						"models/player/scout.mdl"
+	"model_hwm"					"models/player/hwm/scout.mdl"
+	"model_hands"				"models/weapons/c_models/c_medic_arms.mdl"
 	"localize_name"				"TF_Class_Name_Civilian"
 	"speed_max"					"280"
 	"health_max"				"200"
@@ -13,7 +13,7 @@ PlayerClass
 	// Grenades.	
 	
 	// Weapons.	
-	"weapon1"					"TF_WEAPON_FISTS"
+	"weapon1"					"TF_WEAPON_BAT"
 	"weapon2"					""
 	"weapon3"					""
 	
