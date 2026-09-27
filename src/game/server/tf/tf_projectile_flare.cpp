@@ -246,7 +246,8 @@ void CTFProjectile_Flare::Explode( trace_t *pTrace, CBaseEntity *pOther )
 	CTFFlareGun *pFlareGun = dynamic_cast< CTFFlareGun* >( GetLauncher() );
 	if ( pFlareGun || pWeaponMimic )
 	{
-		if ( pFlareGun->GetFlareGunType() == FLAREGUN_SCORCHSHOT || pWeaponMimic->GetProjectileType() == FLAREGUN_SCORCHSHOT )
+		if ( ( pFlareGun && pFlareGun->GetFlareGunType() == FLAREGUN_SCORCHSHOT ) ||
+			 ( pWeaponMimic && pWeaponMimic->GetProjectileType() == FLAREGUN_SCORCHSHOT ) )
 		{
 			// When the scorch shot hits a player...
 			if ( pTFVictim )

@@ -2363,6 +2363,10 @@ typedef enum
 	ACT_MP_CYOA_PDA_IDLE,
 	ACT_MP_CYOA_PDA_OUTRO,
 
+	ACT_ENGINEER_REVOLVER_INSPECT_START,
+	ACT_ENGINEER_REVOLVER_INSPECT_IDLE,
+	ACT_ENGINEER_REVOLVER_INSPECT_END,
+
 
 	// this is the end of the global activities, private per-monster activities start here.
 	LAST_SHARED_ACTIVITY,

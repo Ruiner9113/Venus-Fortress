@@ -1,6 +1,5 @@
 // My mod items
 #base items_custom.txt
-//#base items_experimental.txt
 //#base items_rebalance.txt
 // Live TF2 Item Schema
 #base items_game.txt
