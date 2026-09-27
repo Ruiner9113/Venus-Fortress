@@ -361,11 +361,11 @@
 			"particle_suffix"		"flamethrower"
 		}
 
-		//Deputy
+		//The Deputy
 		"weapon_revolver_secondary"
 		{
 			"enabled"	"1"
-			"item_class"	"tf_weapon_revolver"
+			"item_class"	"tf_weapon_revolver_secondary"
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -387,7 +387,7 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"99"
 			"image_inventory"	"backpack/weapons/w_models/w_revolver"
-			"model_player"	"models/weapons/c_models/c_revolver/c_revolver.mdl"
+			"model_player"		"models/weapons/c_models/c_deputy/c_deputy.mdl"
 			"attach_to_hands"	"1"
 			"inspect_panel_dist" "31"
 			"used_by_classes"
@@ -399,9 +399,19 @@
 				"weapon_stattrak_module_scale"			"0.497"
 				"min_viewmodel_offset"					"10 0 -6"
 			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"					"ACT_ENGINEER_REVOLVER_DRAW"
+					"ACT_VM_IDLE"					"ACT_ENGINEER_REVOLVER_IDLE"
+					"ACT_VM_PRIMARYATTACK"			"ACT_ENGINEER_REVOLVER_PRIMARYATTACK"
+					"ACT_VM_RELOAD"					"ACT_ENGINEER_REVOLVER_RELOAD"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
-			"xifier_class_remap"	"weapon_revolver"
+			"xifier_class_remap"	"weapon_revolver_secondary"
 			"particle_suffix"		"revolver"
 		}
 
@@ -3941,7 +3951,15 @@
 			}
 		}
 		//32031 (Reserved) (Moai)
-		//32032 (Reserved) (Deputy)
+		//The Deputy
+		"32032"
+		{
+			"name"				"The Deputy"
+			"prefab"			"weapon_revolver_secondary paintkit_base"
+			"moditem"			"1"
+			"image_inventory"	"backpack/weapons/c_models/c_deputy/c_deputy"
+			"xifier_class_remap"	"weapon_revolver_secondary"
+		}
 		//The Griefblower - Guitbox
 		"32033"
 		{
